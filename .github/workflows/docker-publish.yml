@@ -2,6 +2,7 @@ name: Docker
 
 on:
   push:
+    # run tests on pushes to master
     branches:
       - master
   create:
@@ -77,4 +78,6 @@ jobs:
           echo VERSION=$VERSION
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:latest
           docker push $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:latest
