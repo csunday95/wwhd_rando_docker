@@ -2,7 +2,9 @@ name: Docker
 
 on:
   push:
-
+    branches:
+      - master
+  create:
     # Publish `v1.2.3` tags as releases.
     tags:
       - v*
@@ -41,7 +43,7 @@ jobs:
     needs: test
 
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event_name == 'create'
 
     steps:
       - name: Checkout repo and submodules
