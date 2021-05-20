@@ -1,3 +1,6 @@
 [submodule "wut"]
 	path = wut
 	url = https://github.com/devkitPro/wut.git
+[submodule "libiosuhax"]
+	path = libiosuhax
+	url = https://github.com/yawut/libiosuhax.git
